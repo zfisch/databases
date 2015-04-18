@@ -8,11 +8,11 @@ module.exports = {
     get: function (req, res) {}, // a function which handles a get request for all messages
     post: function (req, res) {
 
-      //access post data from request
+      // TODO access post data from request
 
-      //hand data to models.messages.post for insertion into db
+      // TODO hand data to models.messages.post for insertion into db
 
-    } // a function which handles posting a message to the database
+    } // TODO a function which handles posting a message to the database
   },
 
   users: {
@@ -22,9 +22,9 @@ module.exports = {
     },
     post: function (req, res) {
 
-      //access post data from request
+      // TODO access post data from request
 
-      ////hand data to models.users.post for insertion into db
+      // TODO hand data to models.users.post for insertion into db
 
     }
   }
