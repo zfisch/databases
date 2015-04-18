@@ -6,14 +6,14 @@ CREATE TABLE users(
   id int unsigned NOT NULL auto_increment,
   username varchar(30) UNIQUE,
 
-  primary key(id)
+  PRIMARY KEY (id)
 );
 
 CREATE TABLE rooms(
   id int unsigned NOT NULL auto_increment,
   roomname varchar(30) UNIQUE,
 
-  primary key(id)
+  PRIMARY KEY (id)
 );
 
 CREATE TABLE messages (
@@ -22,9 +22,17 @@ CREATE TABLE messages (
    userId int unsigned,
    roomId int unsigned,
 
-   primary key (id),
-   foreign key (userId) references users (id),
-   foreign key (roomId) references rooms (id)
+   PRIMARY KEY  (id),
+
+   FOREIGN KEY (userId)
+     REFERENCES users (id)
+     ON UPDATE CASCADE,
+     -- ON DELETE CASCADE,
+
+   FOREIGN KEY (roomId)
+     REFERENCES rooms (id)
+     ON UPDATE CASCADE
+     -- ON DELETE CASCADE
 );
 
 
